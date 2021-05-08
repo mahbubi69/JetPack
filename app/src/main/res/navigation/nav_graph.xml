@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.jetpackactivity.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_recipienFragment"
+            app:destination="@id/recipienFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_transaksiFragment2"
+            app:destination="@id/transaksiFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_blanceFragment"
+            app:destination="@id/blanceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipienFragment"
+        android:name="com.example.jetpackactivity.fragment.RecipienFragment"
+        android:label="fragment_recipien"
+        tools:layout="@layout/fragment_recipien" >
+        <action
+            android:id="@+id/action_recipienFragment_to_amountFragment"
+            app:destination="@id/amountFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.example.jetpackactivity.fragment.ConfirmationFragment"
+        android:label="fragment_confirmation"
+        tools:layout="@layout/fragment_confirmation" />
+
+    <fragment
+        android:id="@+id/transaksiFragment2"
+        android:name="com.example.jetpackactivity.fragment.TransaksiFragment"
+        android:label="fragment_transaksi"
+        tools:layout="@layout/fragment_transaksi" />
+
+    <fragment
+        android:id="@+id/amountFragment"
+        android:name="com.example.jetpackactivity.fragment.AmountFragment"
+        android:label="fragment_amount"
+        tools:layout="@layout/fragment_amount" >
+        <action
+            android:id="@+id/action_amountFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/blanceFragment"
+        android:name="com.example.jetpackactivity.fragment.BlanceFragment"
+        android:label="fragment_blance"
+        tools:layout="@layout/fragment_blance" />
+</navigation>
